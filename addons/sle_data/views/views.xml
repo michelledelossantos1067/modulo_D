@@ -1,0 +1,38 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="sle_data.list">
+      <field name="name">sle_data list</field>
+      <field name="model">sle_data.sle_data</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombres"/>
+          <field name="apellidos"/>
+          <field name="empresa"/>
+          <field name='id_empleado'/>
+        </tree>
+      </field>
+    </record>
+
+
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="sle_data.action_server">
+      <field name="name">sle_data server</field>
+      <field name="model_id" ref="model_sle_data_sle_data"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+
+  </data>
+</odoo>
